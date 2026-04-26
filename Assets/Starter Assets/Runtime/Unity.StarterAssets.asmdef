@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "name": "Unity.StarterAssets",
     "rootNamespace": "",
@@ -13,4 +14,21 @@
     "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false
+=======
+{
+    "name": "Unity.StarterAssets",
+    "rootNamespace": "",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+>>>>>>> cf1216420f77afb438990ea80c532b5b1c4209c5
 }
