@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 
 @import url("ToucScreenInputStyle.uss");
 
 
 VisualElement {}
-=======
-
-@import url("ToucScreenInputStyle.uss");
-
-
-VisualElement {}
->>>>>>> cf1216420f77afb438990ea80c532b5b1c4209c5
