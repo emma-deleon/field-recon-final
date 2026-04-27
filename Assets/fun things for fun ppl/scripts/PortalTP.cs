@@ -9,13 +9,14 @@ public class PortalTP : MonoBehaviour
     public AudioClip teleportSound;
     private AudioSource audioSource;
 
-   
     private ActionBasedContinuousMoveProvider moveProvider;
 
     public GameObject[] objectsToDisableDuringTeleport;
 
-    public Camera portalCamera; // Camera at the destination
-    public Renderer portalScreen; // Screen to display the portal view
+    public GameObject shardsToDisable;
+
+    public Camera portalCamera; 
+    public Renderer portalScreen; 
 
     private void Start()
     {
@@ -30,30 +31,28 @@ public class PortalTP : MonoBehaviour
         {
             RenderTexture portalTexture = new RenderTexture(Screen.width, Screen.height, 24);
             portalCamera.targetTexture = portalTexture;
-            portalScreen.material.mainTexture = portalTexture;
+            portalScreen.material = new Material(portalScreen.material); // important
+			portalScreen.material.SetTexture("_PortalTex", portalTexture);
         }
     }
 
-		private void OnTriggerEnter(Collider other)
-	{
-		//Debug.Log("Triggered by: " + other.name);
+    private void OnTriggerEnter(Collider other)
+    {
+        CharacterController controller = other.GetComponentInParent<CharacterController>();
 
-		CharacterController controller = other.GetComponentInParent<CharacterController>();
+        if (controller != null)
+        {
+            GameObject player = controller.gameObject;
 
-		if (controller != null)
-		{
-			GameObject player = controller.gameObject;
+            moveProvider = player.GetComponentInChildren<ActionBasedContinuousMoveProvider>();
 
-			// Get movement provider
-			moveProvider = player.GetComponentInChildren<ActionBasedContinuousMoveProvider>();
-
-			StartCoroutine(TeleportPlayer(player));
-		}
-	}
+            StartCoroutine(TeleportPlayer(player));
+        }
+    }
 
     private IEnumerator TeleportPlayer(GameObject player)
     {
-        // Disable specified GameObjects
+        // Disable other objects (your existing system)
         foreach (var obj in objectsToDisableDuringTeleport)
         {
             if (obj != null)
@@ -77,25 +76,25 @@ public class PortalTP : MonoBehaviour
         }
 
         // Teleport player
-		CharacterController controller = player.GetComponent<CharacterController>();
+        CharacterController controller = player.GetComponent<CharacterController>();
 
-		if (controller != null)
-		{
-			controller.enabled = false; // IMPORTANT for XR / CC
-		}
+        if (controller != null)
+        {
+            controller.enabled = false;
+        }
 
-		player.transform.position = targetTeleportLocation.position;
-		player.transform.rotation = targetTeleportLocation.rotation;
+        player.transform.position = targetTeleportLocation.position;
+        player.transform.rotation = targetTeleportLocation.rotation;
 
-		if (controller != null)
-		{
-			controller.enabled = true;
-		}
+        if (controller != null)
+        {
+            controller.enabled = true;
+        }
 
         // Wait one frame
         yield return null;
 
-        // Re-enable objects
+        // Re-enable other objects
         foreach (var obj in objectsToDisableDuringTeleport)
         {
             if (obj != null)
@@ -105,9 +104,15 @@ public class PortalTP : MonoBehaviour
         // Re-enable movement
         if (moveProvider != null)
             moveProvider.enabled = true;
-		
-		GetComponent<Collider>().enabled = false; // Prevents re-triggering
-		if (portalScreen != null) portalScreen.enabled = false; // Hides the portal visuals
-		if (portalCamera != null) portalCamera.enabled = false; // Stops the portal camera
+
+        GetComponent<Collider>().enabled = false;
+        if (portalScreen != null) portalScreen.enabled = false;
+        if (portalCamera != null) portalCamera.enabled = false;
+
+        // ✅ DISABLE SHARDS (separate slot, drag works here)
+        if (shardsToDisable != null)
+        {
+            shardsToDisable.SetActive(false);
+        }
     }
 }
