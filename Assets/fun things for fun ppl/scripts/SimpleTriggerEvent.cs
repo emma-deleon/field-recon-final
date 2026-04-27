@@ -3,6 +3,11 @@ using UnityEngine.Events;
 
 public class SimpleTriggerEvent : MonoBehaviour
 {
+    [Header("Settings")]
+    [Tooltip("If checked, this trigger will only work once.")]
+    [SerializeField] private bool disableAfterUse = false;
+    private bool hasBeenUsed = false;
+
     [Header("Trigger Events")]
     [Space(10)]
 
@@ -16,17 +21,21 @@ public class SimpleTriggerEvent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-		//Debug.Log("Detected: " + other.name + " with tag: " + other.tag);
+        // Check if it's already been used (if that setting is on)
+        if (disableAfterUse && hasBeenUsed) return;
 
         if (other.CompareTag("Player"))
         {
-            //Debug.Log("Player detected! Invoking events...");
             onTriggerEnter?.Invoke();
+            hasBeenUsed = true; // Mark as used
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        // Check if it's already been used (if that setting is on)
+        if (disableAfterUse && hasBeenUsed) return;
+
         if (other.CompareTag("Player"))
         {
             onTriggerExit?.Invoke();

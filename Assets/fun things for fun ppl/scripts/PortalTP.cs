@@ -105,5 +105,9 @@ public class PortalTP : MonoBehaviour
         // Re-enable movement
         if (moveProvider != null)
             moveProvider.enabled = true;
+		
+		GetComponent<Collider>().enabled = false; // Prevents re-triggering
+		if (portalScreen != null) portalScreen.enabled = false; // Hides the portal visuals
+		if (portalCamera != null) portalCamera.enabled = false; // Stops the portal camera
     }
 }
