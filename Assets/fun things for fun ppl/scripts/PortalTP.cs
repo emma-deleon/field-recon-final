@@ -17,6 +17,8 @@ public class PortalTP : MonoBehaviour
 
     public Camera portalCamera; 
     public Renderer portalScreen; 
+	
+	public Material destinationSkybox;
 
     private void Start()
     {
@@ -85,6 +87,11 @@ public class PortalTP : MonoBehaviour
 
         player.transform.position = targetTeleportLocation.position;
         player.transform.rotation = targetTeleportLocation.rotation;
+		
+		if (destinationSkybox != null)
+        {
+            RenderSettings.skybox = destinationSkybox;
+        }
 
         if (controller != null)
         {
@@ -109,7 +116,6 @@ public class PortalTP : MonoBehaviour
         if (portalScreen != null) portalScreen.enabled = false;
         if (portalCamera != null) portalCamera.enabled = false;
 
-        // ✅ DISABLE SHARDS (separate slot, drag works here)
         if (shardsToDisable != null)
         {
             shardsToDisable.SetActive(false);
