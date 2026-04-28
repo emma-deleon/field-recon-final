@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: 790fd6cedb34c10488cd6ce79f8b1ed9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\scene.bin
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\scene.bin
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01_blue.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01_blue.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01_blue.001_normal.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01_blue.001_normal.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01_purple.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01_purple.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01a_blue.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01a_blue.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01a_purple.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01a_purple.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01a.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01a.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01b_blue.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01b_blue.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01b_purple.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01b_purple.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01b.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01b.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01c_blue.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01c_blue.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01c_purple.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01c_purple.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01c.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01c.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01d.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01d.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01e.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01e.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01f.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01f.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01g.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_D_01g.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01_a_blue.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01_a_blue.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01_a_blue.001_normal.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01_a_blue.001_normal.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01_blue.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01_blue.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01_purple.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01_purple.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01a_purple.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01a_purple.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01a.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupin_pet_U_01a.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_bloom__stalk_01.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_bloom__stalk_01.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_bloom__stalk_01.001_normal.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_bloom__stalk_01.001_normal.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_01.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_01.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_01.001_normal.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_01.001_normal.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_02.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_02.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_03.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_03.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_04.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_04.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_05.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaf_stalk_05.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_01.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_01.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_01.001_normal.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_01.001_normal.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_02.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_02.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_03.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_03.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_04.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_04.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_05.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_leaflet_05.001_baseColor.png
+  - type: 1
+    originalUri: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_stalk_01.001_baseColor.png
+    assetPath: Assets\fun things for fun ppl\other fun things\lavender_ball\textures\Lupinus_stalk_01.001_baseColor.png
+  reportItems: []
