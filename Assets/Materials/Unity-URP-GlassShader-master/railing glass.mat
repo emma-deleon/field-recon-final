@@ -63,7 +63,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _DisortStrenght: 3
-    - _DisortStrength: 3.2
+    - _DisortStrength: 2.55
     - _DistortionOnTexture: 0.149
     - _Metalic: 0.246
     - _Metallic: 0.14
@@ -76,7 +76,7 @@ Material:
     - _RefractionStrenght: 1.15
     - _Smoothness: 1
     - _Strenght: 0.12
-    - _Tiling: 232
+    - _Tiling: 248
     m_Colors:
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Tiling: {r: 0.1, g: 0.1, b: 0, a: 0}
