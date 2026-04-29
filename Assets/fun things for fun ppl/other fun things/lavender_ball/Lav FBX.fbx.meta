@@ -1,0 +1,280 @@
+fileFormatVersion: 2
+guid: b67c686addcf1f9439d622e0b94a0814
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01_001
+    second: {fileID: 8701913794365427120, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01_blue_001
+    second: {fileID: 6879666478512239942, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01_purple_001
+    second: {fileID: 2403519804119250862, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01a_001
+    second: {fileID: -4095173072595294961, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01a_blue_001
+    second: {fileID: -1285370554840216315, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01a_purple_001
+    second: {fileID: -7622886926163431080, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01b_001
+    second: {fileID: 659604257692028930, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01b_blue_001
+    second: {fileID: 771888155374603817, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01b_purple_001
+    second: {fileID: 5409688530711086791, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01c_001
+    second: {fileID: 4405095939173505883, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01c_blue_001
+    second: {fileID: -3981893948046860089, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01c_purple_001
+    second: {fileID: -8360080301330461217, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01d_001
+    second: {fileID: -8912974641386591729, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01e_001
+    second: {fileID: -2364004550723598096, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01f_001
+    second: {fileID: 1682836208349768591, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_D_01g_001
+    second: {fileID: 7124647766665502362, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_U_01_001
+    second: {fileID: 4125144605945628522, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_U_01_a_blue_001
+    second: {fileID: -3893319219111374243, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_U_01_blue_001
+    second: {fileID: 5408780873000337595, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_U_01_purple_001
+    second: {fileID: 670998701431904134, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_U_01a_001
+    second: {fileID: 488830512369007714, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupin_pet_U_01a_purple_001
+    second: {fileID: -3114572065476910548, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_bloom__stalk_01_001
+    second: {fileID: -6446095339542043072, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_leaf_stalk_01_001
+    second: {fileID: -6048901433454695336, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_leaf_stalk_02_001
+    second: {fileID: -6738460857004808560, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_leaf_stalk_03_001
+    second: {fileID: 2269701111540935469, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_leaf_stalk_04_001
+    second: {fileID: 1190247426916151211, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_leaf_stalk_05_001
+    second: {fileID: 2380299109912539054, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_leaflet_01_001
+    second: {fileID: 2519499633272106923, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_leaflet_02_001
+    second: {fileID: 7978656025085564972, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_leaflet_03_001
+    second: {fileID: 8518866669016722397, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_leaflet_04_001
+    second: {fileID: 8303431085783863381, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_leaflet_05_001
+    second: {fileID: 1263379127993390450, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lupinus_stalk_01_001
+    second: {fileID: -3676272518976239681, guid: 790fd6cedb34c10488cd6ce79f8b1ed9, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
