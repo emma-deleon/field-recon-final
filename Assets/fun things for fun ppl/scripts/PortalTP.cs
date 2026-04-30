@@ -86,7 +86,9 @@ public class PortalTP : MonoBehaviour
         }
 
         player.transform.position = targetTeleportLocation.position;
-        player.transform.rotation = targetTeleportLocation.rotation;
+		
+		Vector3 targetRotation = targetTeleportLocation.eulerAngles;
+		player.transform.rotation = Quaternion.Euler(0, targetRotation.y, 0);
 		
 		if (destinationSkybox != null)
         {
