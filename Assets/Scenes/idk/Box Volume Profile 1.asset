@@ -18,35 +18,13 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.626
+    m_Value: 0.317
   response:
     m_OverrideState: 1
-    m_Value: 0.213
+    m_Value: 0.122
   texture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
---- !u!114 &-5410103611700528597
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
-  m_Name: SplitToning
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.SplitToning
-  active: 1
-  shadows:
-    m_OverrideState: 1
-    m_Value: {r: 0.8490566, g: 0.10412948, b: 0.10412948, a: 1}
-  highlights:
-    m_OverrideState: 0
-    m_Value: {r: 0.72327036, g: 0.72327036, b: 0.72327036, a: 1}
-  balance:
-    m_OverrideState: 1
-    m_Value: 71
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +41,6 @@ MonoBehaviour:
   - {fileID: 5327002774699899079}
   - {fileID: 2777511618900779555}
   - {fileID: -7859559350025546125}
-  - {fileID: -5410103611700528597}
 --- !u!114 &2777511618900779555
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -81,13 +58,13 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   contrast:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: -2.3
   colorFilter:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.48427665, g: 0.33960277, b: 0.33960277, a: 1}
   hueShift:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   saturation:
     m_OverrideState: 1
