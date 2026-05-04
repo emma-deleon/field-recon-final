@@ -4,138 +4,151 @@ using UnityEngine.InputSystem;
 
 public class AlternateObjectInspector : MonoBehaviour
 {
-    [Header("Interaction Range")]
+    // These static variables are shared by ALL books/keys in the scene
+    public static AlternateObjectInspector CurrentActiveInspector = null;
+    public static AlternateObjectInspector PromptOwner = null;
+
+    [Header("1. Distance Settings")]
     public Transform player; 
-    public float interactRange = 3f; 
+    public float interactRange = 2.5f; 
 
-    [Header("Core References")]
-    public GameObject objectToInspect;
-    public Transform inspectAnchor;
+    [Header("2. The Floating Model")]
+    [Tooltip("Drag the specific floating model for THIS object here.")]
+    public GameObject myFloatingModel; 
 
-    [Header("UI Settings")]
-    public GameObject inspectPromptUI;
-    [Tooltip("Drag your 'Press ESC to Exit' Text GameObject here")]
-    public GameObject exitPromptUI; // <--- NEW EXIT UI SLOT
+    [Header("3. Shared UI & Effects")]
+    public GameObject inspectPromptUI; 
+    public GameObject exitPromptUI;    
+    public CanvasGroup backgroundDimmer;
+    public Volume inspectBlurVolume;
+    public float transitionSpeed = 8f;
 
-    [Header("Player Control - FREEZE")]
+    [Header("4. Player Control")]
     public MonoBehaviour playerLookScript;
     public MonoBehaviour playerMovementScript;
 
-    [Header("Post-Processing - BLUR")]
-    public Volume inspectBlurVolume;
-    public float blurFadeSpeed = 5f;
-
-    [Header("Inspection Settings")]
-    public Key inspectKey = Key.I;
+    [Header("5. Settings")]
     public float rotationSpeed = 0.5f;
+    public string inspectLayerName = "Inspect";
 
     private bool _isInspecting = false;
-    private Vector3 _originalPosition;
     private Quaternion _originalRotation;
-    private float _targetBlurWeight = 0f;
+    private MeshRenderer _myTableMesh;
 
     void Start()
     {
-        if (objectToInspect == null) objectToInspect = this.gameObject;
+        _myTableMesh = GetComponent<MeshRenderer>();
 
-        if (player == null)
+        if (myFloatingModel != null)
         {
-            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-            if (playerObj != null) player = playerObj.transform;
+            _originalRotation = myFloatingModel.transform.localRotation;
+            myFloatingModel.SetActive(false);
+            
+            int layer = LayerMask.NameToLayer(inspectLayerName);
+            if (layer != -1) myFloatingModel.layer = layer;
         }
 
-        if (inspectBlurVolume != null) inspectBlurVolume.weight = 0f;
+        // Initially hide UI
         if (inspectPromptUI != null) inspectPromptUI.SetActive(false);
-        if (exitPromptUI != null) exitPromptUI.SetActive(false); // Ensure exit prompt is off at start
+        if (exitPromptUI != null) exitPromptUI.SetActive(false);
     }
 
     void Update()
     {
-        if (Keyboard.current == null || Mouse.current == null || player == null) return;
+        if (player == null) return;
 
-        // 1. Check distance
-        float distance = Vector3.Distance(transform.position, player.position);
-        bool inRange = distance <= interactRange;
+        float dist = Vector3.Distance(transform.position, player.position);
+        bool inRange = dist <= interactRange;
 
-        // 2. Handle Entry UI Prompt Visibility
-        if (inspectPromptUI != null)
+        // --- PROMPT LOGIC (The fix for multiple objects) ---
+        if (!_isInspecting && CurrentActiveInspector == null)
         {
-            inspectPromptUI.SetActive(inRange && !_isInspecting);
-        }
-
-        // 3. Toggle Inspect Mode with [I]
-        if (inRange && Keyboard.current[inspectKey].wasPressedThisFrame)
-        {
-            ToggleInspect();
-        }
-        // Exit Inspect Mode with [ESC]
-        else if (_isInspecting && Keyboard.current[Key.Escape].wasPressedThisFrame)
-        {
-            ToggleInspect();
-        }
-
-        // 4. Force exit if player somehow moves out of range
-        if (!inRange && _isInspecting)
-        {
-            ToggleInspect();
-        }
-
-        // 5. Handle Rotation
-        if (_isInspecting && objectToInspect != null)
-        {
-            if (Mouse.current.leftButton.isPressed)
+            if (inRange)
             {
-                Vector2 mouseDelta = Mouse.current.delta.ReadValue();
-                float mouseX = mouseDelta.x * rotationSpeed;
-                float mouseY = mouseDelta.y * rotationSpeed;
-
-                objectToInspect.transform.Rotate(Camera.main.transform.up, -mouseX, Space.World);
-                objectToInspect.transform.Rotate(Camera.main.transform.right, mouseY, Space.World);
-            }
-        }
-
-        // 6. Handle Blur
-        HandleBlurTransition();
-    }
-
-    void ToggleInspect()
-    {
-        _isInspecting = !_isInspecting;
-
-        if (objectToInspect != null)
-        {
-            if (_isInspecting)
-            {
-                _originalPosition = objectToInspect.transform.position;
-                _originalRotation = objectToInspect.transform.rotation;
-                objectToInspect.transform.position = inspectAnchor.position;
+                // If no one is using the prompt, I'll take it
+                if (PromptOwner == null)
+                {
+                    PromptOwner = this;
+                    if (inspectPromptUI != null) inspectPromptUI.SetActive(true);
+                }
+                
+                // If I am the one owning the prompt, check for input
+                if (PromptOwner == this && Keyboard.current.iKey.wasPressedThisFrame)
+                {
+                    ToggleInspect(true);
+                }
             }
             else
             {
-                objectToInspect.transform.position = _originalPosition;
-                objectToInspect.transform.rotation = _originalRotation;
+                // ONLY turn off the UI if I am the one who turned it on
+                if (PromptOwner == this)
+                {
+                    PromptOwner = null;
+                    if (inspectPromptUI != null) inspectPromptUI.SetActive(false);
+                }
             }
         }
 
-        // Toggle the Exit UI on/off based on inspection state
-        if (exitPromptUI != null)
+        // --- INSPECTION LOGIC ---
+        if (_isInspecting)
         {
-            exitPromptUI.SetActive(_isInspecting);
+            if (Keyboard.current.escapeKey.wasPressedThisFrame || !inRange)
+            {
+                ToggleInspect(false);
+            }
+
+            if (myFloatingModel != null && Mouse.current.leftButton.isPressed)
+            {
+                Vector2 delta = Mouse.current.delta.ReadValue();
+                myFloatingModel.transform.Rotate(Camera.main.transform.up, -delta.x * rotationSpeed, Space.World);
+                myFloatingModel.transform.Rotate(Camera.main.transform.right, delta.y * rotationSpeed, Space.World);
+            }
         }
 
-        if (playerLookScript != null) playerLookScript.enabled = !_isInspecting;
-        if (playerMovementScript != null) playerMovementScript.enabled = !_isInspecting;
-
-        _targetBlurWeight = _isInspecting ? 1f : 0f;
+        // Only handle transitions if I'm the one being looked at
+        if (CurrentActiveInspector == this || CurrentActiveInspector == null)
+        {
+            HandleTransitions();
+        }
     }
 
-    void HandleBlurTransition()
+    void ToggleInspect(bool shouldInspect)
     {
-        if (inspectBlurVolume == null) return;
-
-        if (!Mathf.Approximately(inspectBlurVolume.weight, _targetBlurWeight))
+        _isInspecting = shouldInspect;
+        
+        if (shouldInspect)
         {
-            inspectBlurVolume.weight = Mathf.MoveTowards(inspectBlurVolume.weight, _targetBlurWeight, Time.deltaTime * blurFadeSpeed);
+            CurrentActiveInspector = this;
+            PromptOwner = null; // Clear prompt owner so it doesn't stay on screen
+            if (inspectPromptUI != null) inspectPromptUI.SetActive(false);
+            if (exitPromptUI != null) exitPromptUI.SetActive(true);
+
+            if (_myTableMesh != null) _myTableMesh.enabled = false;
+            if (myFloatingModel != null)
+            {
+                myFloatingModel.transform.localRotation = _originalRotation;
+                myFloatingModel.SetActive(true);
+            }
         }
+        else
+        {
+            CurrentActiveInspector = null;
+            if (exitPromptUI != null) exitPromptUI.SetActive(false);
+
+            if (_myTableMesh != null) _myTableMesh.enabled = true;
+            if (myFloatingModel != null) myFloatingModel.SetActive(false);
+        }
+
+        if (playerLookScript != null) playerLookScript.enabled = !shouldInspect;
+        if (playerMovementScript != null) playerMovementScript.enabled = !shouldInspect;
+    }
+
+    void HandleTransitions()
+    {
+        float target = _isInspecting ? 1f : 0f;
+        if (inspectBlurVolume != null)
+            inspectBlurVolume.weight = Mathf.MoveTowards(inspectBlurVolume.weight, target, Time.deltaTime * transitionSpeed);
+        if (backgroundDimmer != null)
+            backgroundDimmer.alpha = Mathf.MoveTowards(backgroundDimmer.alpha, target, Time.deltaTime * transitionSpeed);
     }
 }
